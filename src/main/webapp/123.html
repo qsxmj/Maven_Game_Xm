@@ -1,0 +1,52 @@
+﻿<html>
+<head>
+    <script type="text/javascript" src="js/Battle.js"></script>
+	<script type="text/javascript" src="js/Store.js"></script>
+</head>
+<body>
+    <button onclick="FindMonster()" id="MonsterFinder">寻找怪物</button>
+    <button onclick="OpenStore()" id="OpenStoreButton">打开商店</button>
+	<button onclick = "OpenBackpack()" id = "OpenBackpack">打开背包</button>
+    <div id="Store" style="display : none;">
+        <button onclick="BuyItem(1)">木剑</button>
+        <button onclick="BuyItem(2)">铁剑</button>
+        <button onclick="CloseStore()">关闭商店</button>
+    </div>
+	<div id="Backpack" style = "display : none;">
+	    <button onclick = "UseItem(0)" id = "Backpack0">空</button>
+		<button onclick = "UseItem(1)" id = "Backpack1">空</button>
+		<button onclick = "UseItem(2)" id = "Backpack2">空</button>
+		<button onclick = "CloseBackpack()" id = "CloseBackpack">关闭背包</button>
+	</div>
+    <div id="BattleFrame">
+    <span>人物血量：</span><span id="Health">100</span><br><img src="img/Healthimg/Health100.jpg" width="106" id="HealthIMG"><br>
+    <span>人物攻击力：</span><span id="Damage">10</span><br>
+    <span>人物级别：</span><span id="Level">1</span><br>
+    <span>人物节操：</span><span id="Money">0</span><br>
+    <span>人物经验：</span><span id="Exp">0</span>/<span id="ExpMax">50</span><br>
+    <div id="Battle" style="display:none;">
+        <span>怪物血量：</span><span id="MonsterHealth">80</span><br><img src="img/Healthimg/Health100.jpg" width="106" id="MonsterHealthIMG"><br>
+        <span>怪物攻击力：</span><span id="MonsterDamage">10</span><br>
+        <button onclick="Attack()">攻击</button>
+    </div>
+    </div>
+</body>
+<script>
+var Backpack = new Array();
+var Interval;
+var Health=100;
+var HealthMax=100;
+var Damage = 10;
+var Money = 0;
+var MonsterHealthMax=100;
+var MonsterHealth=100;
+var MonsterDamage = 10;
+var ImgType;
+var ExpMax=50;
+var Exp=0;
+var Level=1;
+var HealthP;
+var HealthM;
+var CurrentPage = 0;
+</script>
+</html>
