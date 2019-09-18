@@ -27,9 +27,9 @@ public class StudentServlet extends HttpServlet {
 //            System.out.println(studentPojo.getSid() + "\t" + studentPojo.getSname());
 //        }
 
-            request.setAttribute("pojos",pojos);
+        request.setAttribute("pojos", pojos);
 
-            request.getRequestDispatcher("MyJsp.jsp").forward(request,response);
+        request.getRequestDispatcher("MyJsp.jsp").forward(request, response);
 
 
     }

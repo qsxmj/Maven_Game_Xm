@@ -147,7 +147,7 @@
             else
                 config.onOk();
             $("#" + popId).remove();
-            document.location.href = "123.html";
+            document.location.href = "Login.jsp";
             config.onClose(eventType.ok);
         }
 
